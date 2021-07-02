@@ -6,7 +6,9 @@
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{amsfonts}
+\usepackage[ruled,vlined]{algorithm2e}
 \usepackage{bbm}
+\usepackage{pythonhighlight}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[hidelinks]{hyperref}
 \usepackage[margin=1.3in]{geometry}
@@ -77,12 +79,44 @@
 	\end{align}
 	\item \textbf{Softmax Function}: 
 	\begin{equation}
-		\sigma (x_i) = \frac{e^{x_i}}{\sum_{j=1}^{K} e^{x_j}},\,\,\,\, x_i \in \mathbb{R}^K
+		\text{softmax} (x_i) = \frac{e^{x_i}}{\sum_{j=1}^{K} e^{x_j}},\,\,\,\, x_i \in \mathbb{R}^K
+	\end{equation}
+	\item \textbf{Rectified Linear Unit (ReLU)}:
+	\begin{equation}
+		\text{ReLU} (x) = \max \{ x, 0 \}
+	\end{equation}
+	\item \textbf{Leaky ReLU}:
+	\begin{equation}
+		\text{ReLU} (x) = \max \{ x, 0 \} + \alpha \min \{ x, 0 \},\,\,\,\, \alpha > 0
+	\end{equation}
+	\item \textbf{Hyperbolic Tangent Function}:
+	\begin{equation}
+		\text{tanh} (x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
+	\end{equation}
+	\item \textbf{Softplus}:
+	\begin{equation}
+		\text{softplus} (x) = \log (1 + e^x)
 	\end{equation}
 \end{itemize}
 
 \section{Normalization}
 
+\textbf{Batch Normalization}: 
+\begin{align}
+	\text{bn}_{k, j} (a) &= \frac{a - \mathbb{E} (X^{(k)}[j])}{\text{VAR} (X^{(k)}[j])} \\
+	\mathbb{E} (X^{(k)}[j]) &\approx \mu_{\mathcal{B}, j}^{(k)} = \frac{1}{|\mathcal{B}|} \sum_{j \in \mathcal{B}} x^{(k)}[j] \\
+	\text{VAR} (X^{(k)}[j]) &\approx s_{\mathcal{B}, j}^{(k)} = \frac{1}{|\mathcal{B}|} \sum_{j \in \mathcal{B}} (x^{(k)}[j] - \frac{1}{|\mathcal{B}|})^2
+\end{align}
+where, $\mathcal{B}$ means batched data; $X^{(k)}$ stands for input data to the $k$-th layer.
+
+Reason why Batch Normalization works: Avoiding Internal Covariate Shift. Imagine the model is described in a Marcov Chain mode,
+\begin{equation}
+	X^{(0)} \leftarrow X^{(1)} \leftarrow X^{(2)} \leftarrow X^{(3)} \leftarrow ... \leftarrow X^{(n)}
+\end{equation}
+Therefore, the output probability of the $k$-th layer is a conditional distribution from previous prediction probability. As the input to the $1$-st layer is already a batched data, the conditional distribution learning starts from the beginning. When using SGD to update parameters from $\theta^{old}$ to $\theta^{new}$, the covariance of the $k$-th layer parameters will be shifted. This phenomenon is called ``Internal Covariate Shift''. It can sometimes cause vanishing gradient. Using Batch Normalization can pretty much tackle the problem, as it re-scale the vanishing predictions to $[-1, 1]$.
+
+Another reason why Batch Normalization works: It just be smoothing the loss landscape.
+ 
 \section{Regularization}
 
 First, we need to review what is \textbf{Overfitting} and what is \textbf{Underfitting}. Some definitions need to be introduced at the beginning.
@@ -109,8 +143,21 @@ First, we need to review what is \textbf{Overfitting} and what is \textbf{Underf
 
 Popular regularziation methods can be listed as:
 \begin{itemize}
+	\item \textbf{Data Augmentation}
 	\item \textbf{Early Stop}
-	\item \textbf{Dropout}
+	\item \textbf{Dropout}: 
+	\begin{algorithm}[h]
+		\SetAlgoLined
+		\KwIn{mini-batch $\mathcal{B}$}
+%		\KwResult{Write here the result }
+%		initialization\;
+		\For{$X$ $\in$ $\mathcal{B}$}{
+			for earch layer, delete nodes with probability $1 - p$\;
+			derive gradient with backpropagation and set the gradient of droped nodes to $0$;
+		}
+		average the gradients derived above and update the parameters.
+		\caption{How to do dropout}
+	\end{algorithm}
 	\item \textbf{L1 Regularizer}: $\Omega(\theta) := \lambda_{Reg} | \theta | _2$
 	\item \textbf{L2 Regularizer}: $\Omega(\theta) := \lambda_{Reg} || \theta || _2^2$
 \end{itemize}
@@ -132,9 +179,42 @@ Popular regularziation methods can be listed as:
 	\item \textbf{Dice Loss function}
 \end{itemize}
 
+\section{Backpropagation Method}
+
 \section{Optimization Methods}
 
-\section{Metrics}
+\section{Convolutional Neural Networks (CNN)}
+
+\subsection{Convolutional Layers}
+
+\subsection{Pooling Layers}
+
+\subsection{Zero-paddings}
+
+\section{Object Detection}
+
+\subsection{Backbone}
+
+\subsection{Neck Layers}
+
+\subsection{Detection Head}
+
+\subsection{Loss Functions}
+
+\subsection{Matrics}
+
+\section{Image Segmentation}
+
+\subsection{Backbone}
+
+\subsection{Neck Layers}
+
+\subsection{Detection Head}
+
+\subsection{Loss Functions}
+
+\subsection{Matrics}
+
 
 \bibliographystyle{acm}
 \bibliography{bibliography}
