@@ -1,0 +1,40 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1.3in]{geometry}
+
+\title{Deep Learning Reviews}
+
+\author{Ao Zhang}
+
+%\date{June 2015}
+
+\newcommand{\gfigure}[4]
+{
+	\begin{figure}
+      \begin{center}
+          \includegraphics[#3]{#4}
+          \caption{#1}
+          \label{Figure:#2}
+      \end{center}
+    \end{figure}
+}
+\newcommand{\figref}[1]{Figure~\ref{Figure:#1}}
+
+\begin{document}
+\maketitle
+
+
+\section{Level Generation}
+
+Now, we can use this.
+
+\bibliographystyle{acm}
+\bibliography{bibliography}
+\end{document}
