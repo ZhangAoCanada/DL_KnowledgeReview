@@ -99,7 +99,7 @@
 	\end{equation}
 \end{itemize}
 
-\section{Normalization}
+\section{Normalization}  
 
 \textbf{Batch Normalization}: 
 \begin{align}
@@ -179,7 +179,45 @@ Popular regularziation methods can be listed as:
 	\item \textbf{Dice Loss function}
 \end{itemize}
 
-\section{Backpropagation Method}
+\section{Practical Backpropagation Method}
+
+\subsection{Symbolic Differentiation}
+
+This is basically the method TensorFlow uses, a.k.a computational graph.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{images/symbolicbp.png}
+	\caption{Symbolic Differentiation}
+	\label{fig:symbolicbp}
+\end{figure}
+
+\subsection{Numerical Differentiation}
+
+\begin{equation}
+	\frac{\partial f(x)}{\partial x} \approx \frac{f(x + \epsilon) - f(x)}{\epsilon}
+\end{equation}
+
+\subsection{AutoDiff}
+
+\textbf{Dual Numbers} are similar to complex numbers but replace the imaginary part with infinitesimal number $a + \epsilon b$ such that $\epsilon \neq 0$ but $\epsilon^2 = 0$.
+\begin{align}
+	(a + \epsilon b) + (c + \epsilon d ) = (a + c ) + \epsilon (b + d) \\
+	(a + \epsilon b)(c + \epsilon d ) = ac + \epsilon (bc + ad)
+\end{align}
+
+Combined with Taylor Expansion.
+\begin{align}
+	f(a + \epsilon b) &= f(a) + \frac{f^{\prime} (a)}{1!} \epsilon b + \frac{f^{\prime \prime}(a)}{2!} \epsilon^2 b^2 + ... \\
+	&= f(a) + \epsilon b f^{\prime} (a)
+\end{align}
+Reason: $\epsilon^2 = 0$. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{images/autodiffcombine.png}
+	\caption{AutoDiff}
+	\label{fig:autodiff}
+\end{figure}
+
 
 \section{Optimization Methods}
 
@@ -190,6 +228,8 @@ Popular regularziation methods can be listed as:
 \subsection{Pooling Layers}
 
 \subsection{Zero-paddings}
+
+\subsection{Backbones}
 
 \section{Object Detection}
 
@@ -202,6 +242,45 @@ Popular regularziation methods can be listed as:
 \subsection{Loss Functions}
 
 \subsection{Matrics}
+
+\begin{itemize}
+	\item \textbf{Precision}:
+	\begin{equation}
+		\text{precision} = \frac{TP}{TP +_ FP}
+	\end{equation}
+	\item \textbf{Recall}:
+	\begin{equation}
+		\text{recall} = \frac{TP}{TP + FN}
+	\end{equation}
+	\item \textbf{Average Precision (AP)}: the area of precision-recall curves.
+	\item \textbf{F1 Score}:
+	\begin{equation}
+		F1 = \frac{2}{\frac{1}{\text{precision}} + \frac{1}{\text{recall}}} = \frac{TP}{TP + \frac{FN + FP}{2}}
+	\end{equation}
+	\item \textbf{Receiver Operating Characteristics (ROC) Curves}:
+	\begin{align}
+		TPR &= \frac{TP}{TP + FN} \\
+		FPR &= \frac{FP}{TN + FP}
+	\end{align}
+	\item \textbf{Confusion Matrix}: assume a classification task, the confusion matrix is computed on the validation set with each entry of the matrix indicating the count for each class predicted by the classifier. Example shown as below.
+	\begin{equation}
+		C = 
+		\begin{bmatrix}
+			21 & 2 & 7 \\
+			10 & 11 & 9 \\
+			3 & 1 & 26 \\
+		\end{bmatrix}
+	\end{equation}
+	Where, the perfect classifier would have results like,
+	\begin{equation}
+		C = 
+		\begin{bmatrix}
+			30 & 0 & 0 \\
+			0 & 30 & 0 \\
+			0 & 0 & 30 \\
+		\end{bmatrix}
+	\end{equation}
+\end{itemize}
 
 \section{Image Segmentation}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  2 JUL 2021 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  3 JUL 2021 11:51
 entering extended mode
 **./main.tex
 (main.tex
@@ -791,7 +791,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Zhang Ao/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
-<images/overfitting.png, id=141, 943.27406pt x 479.54156pt>
+<images/overfitting.png, id=157, 943.27406pt x 479.54156pt>
 File: images/overfitting.png Graphic file (type png)
 <use images/overfitting.png>
 Package pdftex.def Info: images/overfitting.png  used on input line 134.
@@ -802,19 +802,34 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 176
 (D:\texStudio\miktex\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [3 <./images/overfitting.png>]
-(main.bbl
+<images/symbolicbp.png, id=168, 1834.855pt x 540.0175pt>
+File: images/symbolicbp.png Graphic file (type png)
+<use images/symbolicbp.png>
+Package pdftex.def Info: images/symbolicbp.png  used on input line 189.
+(pdftex.def)             Requested size: 368.64238pt x 108.48773pt.
+<images/autodiffcombine.png, id=169, 1867.97874pt x 622.325pt>
+File: images/autodiffcombine.png Graphic file (type png)
+<use images/autodiffcombine.png>
+Package pdftex.def Info: images/autodiffcombine.png  used on input line 216.
+(pdftex.def)             Requested size: 368.64238pt x 122.8105pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./images/symbolicbp.png (PNG copy)>] [5 <./images/autodiffcombine.png (PNG 
+copy)>] (main.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [4] (main.aux)
+) [6] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 40E294645F59B474BCB4331C9C76ECF5;1357.
+(rerunfilecheck)             Checksum: FA9D82A07E22A91CFFF7C7AE5BB13566;1633.
  ) 
 Here is how much of TeX's memory you used:
- 20461 strings out of 479618
- 372883 string characters out of 2876815
- 699730 words of memory out of 3000000
- 37164 multiletter control sequences out of 15000+200000
+ 20499 strings out of 479618
+ 373523 string characters out of 2876815
+ 699809 words of memory out of 3000000
+ 37180 multiletter control sequences out of 15000+200000
  412369 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,102p,614b,618s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -831,9 +846,9 @@ ic/amsfonts/cm/cmr17.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cm
 r7.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/texSt
 udio/miktex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/texStudio/miktex/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (4 pages, 215941 bytes).
+Output written on main.pdf (6 pages, 663293 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 267 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 244 words of extra memory for PDF output out of 10000 (max. 10000000)
 
