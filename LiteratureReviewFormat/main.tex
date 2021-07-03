@@ -69,6 +69,23 @@
 	\end{equation}
 \end{itemize}
 
+\section{Initalization}
+
+Good intialization of the model parameters will prevent exploding or vanishing gradients. A too-large initialization leads to exploding gradients and a too-small initialization leads to vanishing gradients.
+
+Rules of appropriate intialization:
+\begin{itemize}
+	\item The mean of the activations should be zero.
+	\item The variance of the activations should stay the same across every layer.
+\end{itemize}
+
+Typical intialization methods:
+\begin{itemize}
+	\item Ramdom Norm (Gaussian) Distribution:
+	\item \textbf{Xavier Intialization (most popular)}: Use a normal distribution with $\sigma = \sqrt{\frac{2}{n_{in} + n_{out}}}$; Or use a uniform distribution with a range $r = \sqrt{\frac{6}{n_{in} + n_{out}}}$
+	\item Bias Initialization: often assign them to $0$.
+\end{itemize}
+
 \section{Activation Functions}
 
 \begin{itemize}
@@ -221,15 +238,111 @@ Reason: $\epsilon^2 = 0$.
 
 \section{Optimization Methods}
 
+
+\begin{itemize}
+	\item \textbf{Gradient Descent (GD)}: Assume Dataset $\mathcal{D} = \{ x_1, x_2, ..., x_n \}$, where $n \in \mathbb{R}$.
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} \sum_{i=1}^{n} f(x_i, \theta_{t-1}) \\
+		\theta_{t} &\leftarrow \theta_{t-1} - \eta \cdot g_{t, t-1}
+	\end{align}
+	\item \textbf{Stochastic Gradient Descent (SGD)}
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} f(x_i, \theta_{t-1}) \\
+		\theta_{t} &\leftarrow \theta_{t-1} - \eta \cdot g_{t, t-1}
+	\end{align}
+	\item \textbf{Mini-batched SGD}
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} f(x_i, \theta_{t-1}) \\
+		\theta_{t} &\leftarrow \theta_{t-1} - \eta \cdot g_{t, t-1}
+	\end{align}
+	\item \textbf{Momentum}
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} f(x_i, \theta_{t-1}) \\
+		v_t &\leftarrow \beta v_{t-1} + g_{t, t-1} \\
+		\theta_{t} &\leftarrow \theta_{t-1} - \eta \cdot v_{t}
+	\end{align}
+	\item \textbf{AdaGrad}: The $\odot$ means matrix-vector product.
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} f(x_i, \theta_{t-1}) \\
+		s_t &\leftarrow \beta s_{t-1} + g_{t, t-1}^2	 \\
+		\theta_{t} &\leftarrow \theta_{t-1} - \frac{\eta}{\sqrt{s_t + \epsilon}} \odot g_{t, t-1}
+	\end{align}
+	\item \textbf{Adadelta}
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} f(x_i, \theta_{t-1}) \\
+		g_t^{\prime} &= \frac{\sqrt{\Delta x_{t-1} + \epsilon}}{\sqrt{s_t + \epsilon}} \odot g_{t, t-1} \\
+		s_t &\leftarrow \gamma s_{t-1} + (1 - \gamma) g_{t, t-1}^2	 \\
+		\Delta x_t &= \rho \Delta x_{t-1} + (1 - \rho) {g_t^{\prime}}^2
+	\end{align}
+	\item \textbf{RMSProp}
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} f(x_i, \theta_{t-1}) \\
+		s_t &\leftarrow \gamma s_{t-1} + (1 - \gamma) g_{t, t-1}^2	 \\
+		\theta_{t} &\leftarrow \theta_{t-1} - \frac{\eta}{\sqrt{s_t + \epsilon}} \odot g_{t, t-1}
+	\end{align}
+	\item \textbf{Adam}
+	\begin{align}
+		g_{t, t-1} &= \partial_{\theta} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} f(x_i, \theta_{t-1}) \\
+		v_t &\leftarrow \beta_1 v_{t-1} + (1 - \beta_1) g_{t, t-1}	 \\
+		s_t &\leftarrow \beta_2 s_{t-1} + (1 - \beta_2) g_{t, t-1}^2	 \\
+		\hat{v}_t &= \frac{v_t}{1 - {\beta}_1^{t}} \\
+		\hat{s}_t &= \frac{s_t}{1 - {\beta}_2^{t}} \\
+		\theta_{t} &\leftarrow \theta_{t-1} - \frac{\eta \hat{v}_t}{\sqrt{\hat{s}_t} + \epsilon}
+	\end{align}
+	\item \textbf{Newton's Method}:
+	\begin{equation}
+		\mathbb{\beta}^{t_1} \approx \mathbb{\beta}^{t_0} - \mathbb{H}^{-1} \Delta_{\beta} J (\mathbb{\beta}^{t_0})
+	\end{equation}
+\end{itemize}
+
 \section{Convolutional Neural Networks (CNN)}
 
 \subsection{Convolutional Layers}
 
+How to calculate output size regarding input size.
+\begin{equation}
+	O = \frac{W - K + 2P}{S} + 1
+\end{equation}
+Where, $O$ is output size; $W$ input feature map size; $K$ kernel size; $P$ one-sided padding size; $S$ stride.
+
+\subsection{``Deconvolution'' or Fractionally-Strided Convolution}
+
+The term ``Deconvolution'' is actually fractionally-strided convolution. The stride of this type of convolution can be expressed as fractional numbers, such as $\frac{1}{2}$, $\frac{1}{3}$, and etc. An example is shown as below.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/deconv.png}
+	\caption{AutoDiff}
+	\label{fig:deconv2d}
+\end{figure}
+
 \subsection{Pooling Layers}
 
-\subsection{Zero-paddings}
+\begin{itemize}
+	\item \textbf{Median Pooling}
+	\item \textbf{Mean Pooling}
+	\item \textbf{Max Pooling}
+	\item \textbf{$L^2$ Norm Pooling}
+\end{itemize}
 
 \subsection{Backbones}
+
+\begin{itemize}
+	\item \textbf{Xception}
+	\item \textbf{VGG16}
+	\item \textbf{ResNet50}
+	\item \textbf{InceptionV3}
+	\item \textbf{MobileNet}
+	\item \textbf{DenseNet}
+	\item \textbf{NASNet}
+\end{itemize}
+
+\subsection{Data Augmentation}
+
+\begin{itemize}
+	\item \textbf{Point Operations}: Change brightness, saturation, hue, gamma, correction, histogram equalization, etc.
+	\item \textbf{Geometric Operations}: Shift, flip, rotate or shear.
+	\item \textbf{Adding Noise}: Gaussian noise, etc.
+\end{itemize}
 
 \section{Object Detection}
 

@@ -1,27 +1,29 @@
 \BOOKMARK [1][-]{section.1}{Some Definitions}{}% 1
-\BOOKMARK [1][-]{section.2}{Activation Functions}{}% 2
-\BOOKMARK [1][-]{section.3}{Normalization}{}% 3
-\BOOKMARK [1][-]{section.4}{Regularization}{}% 4
-\BOOKMARK [1][-]{section.5}{Loss Functions}{}% 5
-\BOOKMARK [1][-]{section.6}{Practical Backpropagation Method}{}% 6
-\BOOKMARK [2][-]{subsection.6.1}{Symbolic Differentiation}{section.6}% 7
-\BOOKMARK [2][-]{subsection.6.2}{Numerical Differentiation}{section.6}% 8
-\BOOKMARK [2][-]{subsection.6.3}{AutoDiff}{section.6}% 9
-\BOOKMARK [1][-]{section.7}{Optimization Methods}{}% 10
-\BOOKMARK [1][-]{section.8}{Convolutional Neural Networks \(CNN\)}{}% 11
-\BOOKMARK [2][-]{subsection.8.1}{Convolutional Layers}{section.8}% 12
-\BOOKMARK [2][-]{subsection.8.2}{Pooling Layers}{section.8}% 13
-\BOOKMARK [2][-]{subsection.8.3}{Zero-paddings}{section.8}% 14
-\BOOKMARK [2][-]{subsection.8.4}{Backbones}{section.8}% 15
-\BOOKMARK [1][-]{section.9}{Object Detection}{}% 16
-\BOOKMARK [2][-]{subsection.9.1}{Backbone}{section.9}% 17
-\BOOKMARK [2][-]{subsection.9.2}{Neck Layers}{section.9}% 18
-\BOOKMARK [2][-]{subsection.9.3}{Detection Head}{section.9}% 19
-\BOOKMARK [2][-]{subsection.9.4}{Loss Functions}{section.9}% 20
-\BOOKMARK [2][-]{subsection.9.5}{Matrics}{section.9}% 21
-\BOOKMARK [1][-]{section.10}{Image Segmentation}{}% 22
-\BOOKMARK [2][-]{subsection.10.1}{Backbone}{section.10}% 23
-\BOOKMARK [2][-]{subsection.10.2}{Neck Layers}{section.10}% 24
-\BOOKMARK [2][-]{subsection.10.3}{Detection Head}{section.10}% 25
-\BOOKMARK [2][-]{subsection.10.4}{Loss Functions}{section.10}% 26
-\BOOKMARK [2][-]{subsection.10.5}{Matrics}{section.10}% 27
+\BOOKMARK [1][-]{section.2}{Initalization}{}% 2
+\BOOKMARK [1][-]{section.3}{Activation Functions}{}% 3
+\BOOKMARK [1][-]{section.4}{Normalization}{}% 4
+\BOOKMARK [1][-]{section.5}{Regularization}{}% 5
+\BOOKMARK [1][-]{section.6}{Loss Functions}{}% 6
+\BOOKMARK [1][-]{section.7}{Practical Backpropagation Method}{}% 7
+\BOOKMARK [2][-]{subsection.7.1}{Symbolic Differentiation}{section.7}% 8
+\BOOKMARK [2][-]{subsection.7.2}{Numerical Differentiation}{section.7}% 9
+\BOOKMARK [2][-]{subsection.7.3}{AutoDiff}{section.7}% 10
+\BOOKMARK [1][-]{section.8}{Optimization Methods}{}% 11
+\BOOKMARK [1][-]{section.9}{Convolutional Neural Networks \(CNN\)}{}% 12
+\BOOKMARK [2][-]{subsection.9.1}{Convolutional Layers}{section.9}% 13
+\BOOKMARK [2][-]{subsection.9.2}{``Deconvolution'' or Fractionally-Strided Convolution}{section.9}% 14
+\BOOKMARK [2][-]{subsection.9.3}{Pooling Layers}{section.9}% 15
+\BOOKMARK [2][-]{subsection.9.4}{Backbones}{section.9}% 16
+\BOOKMARK [2][-]{subsection.9.5}{Data Augmentation}{section.9}% 17
+\BOOKMARK [1][-]{section.10}{Object Detection}{}% 18
+\BOOKMARK [2][-]{subsection.10.1}{Backbone}{section.10}% 19
+\BOOKMARK [2][-]{subsection.10.2}{Neck Layers}{section.10}% 20
+\BOOKMARK [2][-]{subsection.10.3}{Detection Head}{section.10}% 21
+\BOOKMARK [2][-]{subsection.10.4}{Loss Functions}{section.10}% 22
+\BOOKMARK [2][-]{subsection.10.5}{Matrics}{section.10}% 23
+\BOOKMARK [1][-]{section.11}{Image Segmentation}{}% 24
+\BOOKMARK [2][-]{subsection.11.1}{Backbone}{section.11}% 25
+\BOOKMARK [2][-]{subsection.11.2}{Neck Layers}{section.11}% 26
+\BOOKMARK [2][-]{subsection.11.3}{Detection Head}{section.11}% 27
+\BOOKMARK [2][-]{subsection.11.4}{Loss Functions}{section.11}% 28
+\BOOKMARK [2][-]{subsection.11.5}{Matrics}{section.11}% 29
