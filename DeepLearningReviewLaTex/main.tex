@@ -324,109 +324,118 @@ The term ``Deconvolution'' is actually fractionally-strided convolution. The str
 	\item \textbf{$L^2$ Norm Pooling}
 \end{itemize}
 
-\subsection{Backbones}
-
-\begin{itemize}
-	\item \textbf{Xception}
-	\item \textbf{VGG16}
-	\item \textbf{ResNet50}
-	\item \textbf{InceptionV3}
-	\item \textbf{MobileNet}
-	\item \textbf{DenseNet}
-	\item \textbf{NASNet}
-\end{itemize}
-
-\subsection{Neck Layers}
-
-\begin{itemize}
-	\item \textbf{Feature Pyramid Networks (FPN)}
-\end{itemize}
-
-\subsection{Data Augmentation}
-
-\begin{itemize}
-	\item \textbf{Point Operations}: Change brightness, saturation, hue, gamma, correction, histogram equalization, etc.
-	\item \textbf{Geometric Operations}: Shift, flip, rotate or shear.
-	\item \textbf{Adding Noise}: Gaussian noise, etc.
-\end{itemize}
-
-\section{Object Detection}
-
-\subsection{One-Stage Detector}
-
-\begin{itemize}
-	\item \textbf{YOLO}
-	\item \textbf{SSD}
-\end{itemize}
-
-\subsection{Two-Stage Detector}
-
-\begin{itemize}
-	\item \textbf{Faster R-CNN}: \textbf{Region Proposal Networks} + \textbf{Classification Head}; It is an anchor-based method.
-\end{itemize}
-
-\subsection{Metrics}
-
-\begin{itemize}
-	\item \textbf{Precision}:
-	\begin{equation}
-		\text{precision} = \frac{TP}{TP +_ FP}
-	\end{equation}
-	\item \textbf{Recall}:
-	\begin{equation}
-		\text{recall} = \frac{TP}{TP + FN}
-	\end{equation}
-	\item \textbf{Average Precision (AP)}: the area of precision-recall curves.
-	\item \textbf{F1 Score}:
-	\begin{equation}
-		F1 = \frac{2}{\frac{1}{\text{precision}} + \frac{1}{\text{recall}}} = \frac{TP}{TP + \frac{FN + FP}{2}}
-	\end{equation}
-	\item \textbf{Receiver Operating Characteristics (ROC) Curves}:
-	\begin{align}
-		TPR &= \frac{TP}{TP + FN} \\
-		FPR &= \frac{FP}{TN + FP}
-	\end{align}
-	\item \textbf{Confusion Matrix}: assume a classification task, the confusion matrix is computed on the validation set with each entry of the matrix indicating the count for each class predicted by the classifier. Example shown as below.
-	\begin{equation}
-		C = 
-		\begin{bmatrix}
-			21 & 2 & 7 \\
-			10 & 11 & 9 \\
-			3 & 1 & 26 \\
-		\end{bmatrix}
-	\end{equation}
-	Where, the perfect classifier would have results like,
-	\begin{equation}
-		C = 
-		\begin{bmatrix}
-			30 & 0 & 0 \\
-			0 & 30 & 0 \\
-			0 & 0 & 30 \\
-		\end{bmatrix}
-	\end{equation}
-\end{itemize}
-
-\section{Image Segmentation}
-
-\subsection{Instance Segmentation}
-
-\begin{itemize}
-	\item \textbf{Mask R-CNN}
-	\item \textbf{YOLACT}
-	\item \textbf{SOLO}
-\end{itemize}
-
-\subsection{Semantic Segmentation}
-
-\begin{itemize}
-	\item \textbf{SegNet}
-	\item \textbf{FCN}
-	\item \textbf{U-Net}
-\end{itemize}
-
-\subsection{Metrics}
 
 
-\bibliographystyle{acm}
-\bibliography{bibliography}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting here, we shall write another one %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{Backbones}
+%
+%\begin{itemize}
+%	\item \textbf{Xception}
+%	\item \textbf{VGG16}
+%	\item \textbf{ResNet50}
+%	\item \textbf{InceptionV3}
+%	\item \textbf{MobileNet}
+%	\item \textbf{DenseNet}
+%	\item \textbf{NASNet}
+%\end{itemize}
+%
+%\subsection{Neck Layers}
+%
+%\begin{itemize}
+%	\item \textbf{Feature Pyramid Networks (FPN)}
+%\end{itemize}
+%
+%\subsection{Data Augmentation}
+%
+%\begin{itemize}
+%	\item \textbf{Point Operations}: Change brightness, saturation, hue, gamma, correction, histogram equalization, etc.
+%	\item \textbf{Geometric Operations}: Shift, flip, rotate or shear.
+%	\item \textbf{Adding Noise}: Gaussian noise, etc.
+%\end{itemize}
+%
+%\section{Object Detection}
+%
+%\subsection{One-Stage Detector}
+%
+%\begin{itemize}
+%	\item \textbf{YOLO}
+%	\item \textbf{SSD}
+%\end{itemize}
+%
+%\subsection{Two-Stage Detector}
+%
+%\begin{itemize}
+%	\item \textbf{Faster R-CNN}: \textbf{Region Proposal Networks} + \textbf{Classification Head}; It is an anchor-based method.
+%\end{itemize}
+%
+%\subsection{Metrics}
+%
+%\begin{itemize}
+%	\item \textbf{Precision}:
+%	\begin{equation}
+%		\text{precision} = \frac{TP}{TP +_ FP}
+%	\end{equation}
+%	\item \textbf{Recall}:
+%	\begin{equation}
+%		\text{recall} = \frac{TP}{TP + FN}
+%	\end{equation}
+%	\item \textbf{Average Precision (AP)}: the area of precision-recall curves.
+%	\item \textbf{F1 Score}:
+%	\begin{equation}
+%		F1 = \frac{2}{\frac{1}{\text{precision}} + \frac{1}{\text{recall}}} = \frac{TP}{TP + \frac{FN + FP}{2}}
+%	\end{equation}
+%	\item \textbf{Receiver Operating Characteristics (ROC) Curves}:
+%	\begin{align}
+%		TPR &= \frac{TP}{TP + FN} \\
+%		FPR &= \frac{FP}{TN + FP}
+%	\end{align}
+%	\item \textbf{Confusion Matrix}: assume a classification task, the confusion matrix is computed on the validation set with each entry of the matrix indicating the count for each class predicted by the classifier. Example shown as below.
+%	\begin{equation}
+%		C = 
+%		\begin{bmatrix}
+%			21 & 2 & 7 \\
+%			10 & 11 & 9 \\
+%			3 & 1 & 26 \\
+%		\end{bmatrix}
+%	\end{equation}
+%	Where, the perfect classifier would have results like,
+%	\begin{equation}
+%		C = 
+%		\begin{bmatrix}
+%			30 & 0 & 0 \\
+%			0 & 30 & 0 \\
+%			0 & 0 & 30 \\
+%		\end{bmatrix}
+%	\end{equation}
+%\end{itemize}
+%
+%\section{Image Segmentation}
+%
+%\subsection{Instance Segmentation}
+%
+%\begin{itemize}
+%	\item \textbf{Mask R-CNN}
+%	\item \textbf{YOLACT}
+%	\item \textbf{SOLO}
+%\end{itemize}
+%
+%\subsection{Semantic Segmentation}
+%
+%\begin{itemize}
+%	\item \textbf{SegNet}
+%	\item \textbf{FCN}
+%	\item \textbf{U-Net}
+%\end{itemize}
+%
+%\subsection{Metrics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\bibliographystyle{acm}
+%\bibliography{bibliography}
 \end{document}
