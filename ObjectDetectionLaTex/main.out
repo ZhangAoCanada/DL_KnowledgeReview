@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Backbones}{}% 1
+\BOOKMARK [1][-]{section.2}{Neck Layers}{}% 2
+\BOOKMARK [1][-]{section.3}{Detection Head}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{One-Stage Detector}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Two-Stage Detector}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Metrics}{}% 6
+\BOOKMARK [1][-]{section.5}{Others}{}% 7
+\BOOKMARK [2][-]{subsection.5.1}{Data Augmentation}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.2}{Loss Functions}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.3}{Regularization}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.4}{Normalization}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.5}{Skip-Connections}{section.5}% 12
