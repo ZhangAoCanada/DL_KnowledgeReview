@@ -289,7 +289,7 @@ Reason: $\epsilon^2 = 0$.
 		\hat{s}_t &= \frac{s_t}{1 - {\beta}_2^{t}} \\
 		\theta_{t} &\leftarrow \theta_{t-1} - \frac{\eta \hat{v}_t}{\sqrt{\hat{s}_t} + \epsilon}
 	\end{align}
-	\item \textbf{Newton's Method}:
+	\item \textbf{Newton's Method}: Hessian Matrix too big for computation.
 	\begin{equation}
 		\mathbb{\beta}^{t_1} \approx \mathbb{\beta}^{t_0} - \mathbb{H}^{-1} \Delta_{\beta} J (\mathbb{\beta}^{t_0})
 	\end{equation}
@@ -336,6 +336,12 @@ The term ``Deconvolution'' is actually fractionally-strided convolution. The str
 	\item \textbf{NASNet}
 \end{itemize}
 
+\subsection{Neck Layers}
+
+\begin{itemize}
+	\item \textbf{Feature Pyramid Networks (FPN)}
+\end{itemize}
+
 \subsection{Data Augmentation}
 
 \begin{itemize}
@@ -346,15 +352,20 @@ The term ``Deconvolution'' is actually fractionally-strided convolution. The str
 
 \section{Object Detection}
 
-\subsection{Backbone}
+\subsection{One-Stage Detector}
 
-\subsection{Neck Layers}
+\begin{itemize}
+	\item \textbf{YOLO}
+	\item \textbf{SSD}
+\end{itemize}
 
-\subsection{Detection Head}
+\subsection{Two-Stage Detector}
 
-\subsection{Loss Functions}
+\begin{itemize}
+	\item \textbf{Faster R-CNN}: \textbf{Region Proposal Networks} + \textbf{Classification Head}; It is an anchor-based method.
+\end{itemize}
 
-\subsection{Matrics}
+\subsection{Metrics}
 
 \begin{itemize}
 	\item \textbf{Precision}:
@@ -397,15 +408,23 @@ The term ``Deconvolution'' is actually fractionally-strided convolution. The str
 
 \section{Image Segmentation}
 
-\subsection{Backbone}
+\subsection{Instance Segmentation}
 
-\subsection{Neck Layers}
+\begin{itemize}
+	\item \textbf{Mask R-CNN}
+	\item \textbf{YOLACT}
+	\item \textbf{SOLO}
+\end{itemize}
 
-\subsection{Detection Head}
+\subsection{Semantic Segmentation}
 
-\subsection{Loss Functions}
+\begin{itemize}
+	\item \textbf{SegNet}
+	\item \textbf{FCN}
+	\item \textbf{U-Net}
+\end{itemize}
 
-\subsection{Matrics}
+\subsection{Metrics}
 
 
 \bibliographystyle{acm}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  3 JUL 2021 13:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  3 JUL 2021 14:11
 entering extended mode
 **./main.tex
 (main.tex
@@ -791,7 +791,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Zhang Ao/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
-<images/overfitting.png, id=164, 943.27406pt x 479.54156pt>
+<images/overfitting.png, id=160, 943.27406pt x 479.54156pt>
 File: images/overfitting.png Graphic file (type png)
 <use images/overfitting.png>
 Package pdftex.def Info: images/overfitting.png  used on input line 151.
@@ -806,20 +806,20 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 193
  (D:\texStudio\miktex\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-<images/symbolicbp.png, id=174, 1834.855pt x 540.0175pt>
+<images/symbolicbp.png, id=170, 1834.855pt x 540.0175pt>
 File: images/symbolicbp.png Graphic file (type png)
 <use images/symbolicbp.png>
 Package pdftex.def Info: images/symbolicbp.png  used on input line 206.
 (pdftex.def)             Requested size: 368.64238pt x 108.48773pt.
 
 [4 <./images/symbolicbp.png (PNG copy)>]
-<images/autodiffcombine.png, id=188, 1867.97874pt x 622.325pt>
+<images/autodiffcombine.png, id=184, 1867.97874pt x 622.325pt>
 File: images/autodiffcombine.png Graphic file (type png)
 <use images/autodiffcombine.png>
 Package pdftex.def Info: images/autodiffcombine.png  used on input line 233.
 (pdftex.def)             Requested size: 368.64238pt x 122.8105pt.
  [5 <./images/autodiffcombine.png (PNG copy)>]
-<images/deconv.png, id=208, 900.36375pt x 415.5525pt>
+<images/deconv.png, id=204, 900.36375pt x 415.5525pt>
 File: images/deconv.png Graphic file (type png)
 <use images/deconv.png>
 Package pdftex.def Info: images/deconv.png  used on input line 313.
@@ -833,34 +833,46 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) [8] (main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A46939B065E608CB584D9C55AA264B56;1800.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 554DC488D766BDE790F314C82EF4727B;1746
+(rerunfilecheck)             After:  6F529E1990AE76F04C7572D99DCA7762;1637.
  ) 
 Here is how much of TeX's memory you used:
- 20540 strings out of 479618
- 374091 string characters out of 2876815
+ 20538 strings out of 479618
+ 374057 string characters out of 2876815
  703839 words of memory out of 3000000
- 37188 multiletter control sequences out of 15000+200000
+ 37187 multiletter control sequences out of 15000+200000
  412369 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,102p,614b,618s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Zhang Ao\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bb
-m10.pk> <C:\Users\Zhang Ao\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\tcrm1000.pk><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/texStudio/mi
-ktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/texStudio/miktex/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts
-/cm/cmmi5.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:
-/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/texStudio/miktex
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/texStudio/miktex/fonts/type1/publ
-ic/amsfonts/cm/cmr17.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cm
-r5.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/texStud
-io/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/texStudio/miktex/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb><D:/texStudio/miktex/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on main.pdf (8 pages, 798006 bytes).
+pdfTeX warning (dest): name{subsection.11.5} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.4} has been referenced but does not e
+xist, replaced by a fixed one
+
+ <C:\Users\Zhang Ao\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm1
+0.pk> <C:\Users\Zhang Ao\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1000.pk><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D
+:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/texStudio/mikt
+ex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/texStudio/miktex/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/t
+exStudio/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/texStudio/miktex/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><D:/texStudio/miktex/fonts/type1/public
+/amsfonts/cm/cmr17.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmr5
+.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/texStudio
+/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/texStudio/miktex/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><D:/texStudio/miktex/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on main.pdf (8 pages, 798057 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 105 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

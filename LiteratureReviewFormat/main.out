@@ -14,16 +14,13 @@
 \BOOKMARK [2][-]{subsection.9.2}{``Deconvolution'' or Fractionally-Strided Convolution}{section.9}% 14
 \BOOKMARK [2][-]{subsection.9.3}{Pooling Layers}{section.9}% 15
 \BOOKMARK [2][-]{subsection.9.4}{Backbones}{section.9}% 16
-\BOOKMARK [2][-]{subsection.9.5}{Data Augmentation}{section.9}% 17
-\BOOKMARK [1][-]{section.10}{Object Detection}{}% 18
-\BOOKMARK [2][-]{subsection.10.1}{Backbone}{section.10}% 19
-\BOOKMARK [2][-]{subsection.10.2}{Neck Layers}{section.10}% 20
-\BOOKMARK [2][-]{subsection.10.3}{Detection Head}{section.10}% 21
-\BOOKMARK [2][-]{subsection.10.4}{Loss Functions}{section.10}% 22
-\BOOKMARK [2][-]{subsection.10.5}{Matrics}{section.10}% 23
-\BOOKMARK [1][-]{section.11}{Image Segmentation}{}% 24
-\BOOKMARK [2][-]{subsection.11.1}{Backbone}{section.11}% 25
-\BOOKMARK [2][-]{subsection.11.2}{Neck Layers}{section.11}% 26
-\BOOKMARK [2][-]{subsection.11.3}{Detection Head}{section.11}% 27
-\BOOKMARK [2][-]{subsection.11.4}{Loss Functions}{section.11}% 28
-\BOOKMARK [2][-]{subsection.11.5}{Matrics}{section.11}% 29
+\BOOKMARK [2][-]{subsection.9.5}{Neck Layers}{section.9}% 17
+\BOOKMARK [2][-]{subsection.9.6}{Data Augmentation}{section.9}% 18
+\BOOKMARK [1][-]{section.10}{Object Detection}{}% 19
+\BOOKMARK [2][-]{subsection.10.1}{One-Stage Detector}{section.10}% 20
+\BOOKMARK [2][-]{subsection.10.2}{Two-Stage Detector}{section.10}% 21
+\BOOKMARK [2][-]{subsection.10.3}{Metrics}{section.10}% 22
+\BOOKMARK [1][-]{section.11}{Image Segmentation}{}% 23
+\BOOKMARK [2][-]{subsection.11.1}{Instance Segmentation}{section.11}% 24
+\BOOKMARK [2][-]{subsection.11.2}{Semantic Segmentation}{section.11}% 25
+\BOOKMARK [2][-]{subsection.11.3}{Metrics}{section.11}% 26
