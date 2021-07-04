@@ -27,7 +27,12 @@
     - [Noise/Blur](#Noise/Blur)
     - [CutOut/MixUp/CutMix](#Cutout/MixUp/CutMix)
 - [Regularization](#Regularization)
+    - [DropOut](#Dropout)
+    - [DropPath](#Droppath)
+    - [DropBlock](#Dropblock)
 - [Normalization](#Normalization)
+    - [Batch Normalization](#BatchNorm)
+    - [Layer Norm](#LayerNorm)
 
 ## Activation Functions<a name="Activations"/>
 
@@ -135,7 +140,7 @@ CE(gt, pred) = - gt * log(pred) - (1 - gt) * log(1 - pred)
 
 ## Data Augmentation<a name="DataAugmentation"/>
 
-### [Geometric](https://github.com/aleju/imgaug#example_images)<a name="Geometric">
+### [Geometric](https://github.com/aleju/imgaug#example_images)<a name="Geometric"/>
 
 Including Rotation, Flip, Affine, Perspective Transformation
 
@@ -143,10 +148,74 @@ Rotation                  |  Flip                     |  Affine                |
 :------------------------:|:-------------------------:|:----------------------:|:----------------------:|
 ![](images/rotation.gif)  |  ![](images/flip.gif)     |  ![](images/affine.gif)|  ![](images/PerspectiveTransformation.gif)
 
-### [Color/Contrast](https://github.com/aleju/imgaug#example_images)<a name="ColorContrast">
+### [Color/Contrast](https://github.com/aleju/imgaug#example_images)<a name="ColorContrast"/>
 
-### [Crop/Pad](https://github.com/aleju/imgaug#example_images)<a name="Crop/Pad">
+Including Brightness, Saturation, Hue, Gamma, Color Invert
 
-### [Noise/Blur](https://github.com/aleju/imgaug#example_images)<a name="Noise/Blur">
+Brightness                | Saturation                |  Hue                   | Gamma                  | Color Invert
+:------------------------:|:-------------------------:|:----------------------:|:----------------------:|:-----------------:
+![](images/brightness.gif)  |  ![](images/saturation.gif)     |  ![](images/hue.gif)|  ![](images/gamma.gif) | ![](images/invert.gif)
 
-### [CutOut/MixUp/CutMix](https://github.com/aleju/imgaug#example_images)<a name="Cutout/MixUp/CutMix">
+### [Crop/Pad](https://github.com/aleju/imgaug#example_images)<a name="Crop/Pad"/>
+
+Including Crop and Pad
+
+Crop                | Pad                
+:------------------------:|:-------------------------:
+![](images/crop.gif)  |  ![](images/pad.gif)
+
+### [Noise/Blur](https://github.com/aleju/imgaug#example_images)<a name="Noise/Blur"/>
+
+Including Salt and Pepper Noise, Gaussian Blur
+
+Salt and Pepper           | Gaussian Blur                
+:------------------------:|:-------------------------:
+![](images/saltandpepper.gif)  |  ![](images/gaussianblur.gif)
+
+### [CutOut/MixUp/CutMix](https://github.com/aleju/imgaug#example_images)<a name="Cutout/MixUp/CutMix"/>
+
+Including 3 papers, [CutOut](https://arxiv.org/abs/1708.04552), [MixUp](https://arxiv.org/abs/1710.09412) and [CutMix](https://arxiv.org/abs/1905.04899)
+
+<p align="center">
+  <img src="./images/CutMix.png" height="300">
+</p>
+
+## Regularization<a name="Reuglarization"/>
+
+    - [DropOut](#Dropout)
+    - [DropPath](#Droppath)
+    - [DropBlock](#Dropblock)
+
+### [DropOut](https://arxiv.org/abs/1207.0580) (2012)<a name="Dropout"/>
+
+Implementations can be found at [TensorFlow](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout) and [PyTorch](https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html).
+
+### [DropPath](https://arxiv.org/abs/1605.07648v4) (2017)<a name="Droppath"/>
+
+<p align="center">
+  <img src="./images/droppath.png" height="500">
+</p>
+
+### [DropBlock](https://arxiv.org/abs/1810.12890) (2018)<a name="Dropblock"/>
+
+<p align="center">
+  <img src="./images/dropblock.png" height="500">
+</p>
+
+## Normalization<a name="Normalization"/>
+
+### [Batch Normalization](https://arxiv.org/abs/1502.03167) (2015)<a name="BatchNorm"/>
+
+**NOTE**: Normalization is conducted through *batch size*.
+
+<p align="center">
+  <img src="./images/bn.png" height="400">
+</p>
+
+### [Layer Norm](https://arxiv.org/abs/1607.06450) (2016)<a name="LayerNorm"/>
+
+**NOTE**: Normalization is conducted through *feature channels*.
+
+<p align="center">
+  <img src="./images/ln.png" height="100">
+</p>
