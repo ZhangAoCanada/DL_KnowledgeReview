@@ -49,23 +49,74 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting here, we shall write another one %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Backbones}
+%\section{Backbones}
+%
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.9\textwidth]{images/AlexNet.png}
+%		\caption{AlexNet}
+%		\label{fig:alexnet}
+%	\end{figure}
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.65\textwidth]{images/VGG16.png}
+%		\caption{VGG16}
+%		\label{fig:vgg16}
+%	\end{figure}
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.50\textwidth]{images/ResNet.png}
+%		\caption{Left: Basic residual block; Right: Bottleneck residual block.}
+%		\label{fig:resnet}
+%	\end{figure}
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.85\textwidth]{images/Inception.png}
+%		\caption{Inception.}
+%		\label{fig:inception}
+%	\end{figure}
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.8\textwidth]{images/mobilenet.png}
+%		\caption{MobileNet v1 and v2.}
+%		\label{fig:mobilenet}
+%	\end{figure}
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.95\textwidth]{images/densenet.png}
+%		\caption{DenseNet.}
+%		\label{fig:densenet}
+%	\end{figure}
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.95\textwidth]{images/shufflenet.png}
+%		\caption{ShuffleNet.}
+%		\label{fig:shufflenet}
+%	\end{figure}
+%
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.95\textwidth]{images/SpineNet.png}
+%		\caption{SpineNet.}
+%		\label{fig:spinenet}
+%	\end{figure}
+%
+%\section{Neck Layers}
 
-\begin{itemize}
-	\item \textbf{Xception}
-	\item \textbf{VGG16}
-	\item \textbf{ResNet50}
-	\item \textbf{InceptionV3}
-	\item \textbf{MobileNet}
-	\item \textbf{DenseNet}
-	\item \textbf{NASNet}
-\end{itemize}
-
-\section{Neck Layers}
-
-\begin{itemize}
-	\item \textbf{Feature Pyramid Networks (FPN)}
-\end{itemize}
+%\begin{itemize}
+%	\item \textbf{Feature Pyramid Networks (FPN)}
+%	\item \textbf{Feature Pyramid Networks (FPN)}
+%	\item \textbf{Feature Pyramid Networks (FPN)}
+%	\item \textbf{Feature Pyramid Networks (FPN)}
+%	\item \textbf{Feature Pyramid Networks (FPN)}
+%\end{itemize}
 
 
 \section{Detection Head}
@@ -80,7 +131,7 @@
 		\caption{YOLO}
 		\label{fig:yolo}
 	\end{figure}
-	The anchor boxes of YOLO are directly found by K-means Clustering on the entire dataset with a certain error rate threshold.
+	The anchor boxes of YOLO are directly found by K-means Clustering on the entire dataset with a certain error rate threshold. As YOLO keeps evolving, the box decoding system changed a little bit during the recent research. Starting from YOLOv3, hierarchical stages for the box decoding is added. The final feature maps shape thus chagned to $(B, 3, W, H, K/3 \times (5 + num\_classes))$. Three stages for the better detections of small objects.
 	\item \textbf{SSD}: The final feature maps shape of SSD Detection Head should be $(B, m, W, H, K \times (4 + num\_classes))$, where $m$ means number of output feature layers for the decoding; $4$ consist $[x, y, w, h]$. The box decoding system is shown as below.
 	\begin{figure}[h]
 		\centering
@@ -92,7 +143,7 @@
 	\begin{align}
 		s_k &= s_{min} + \frac{s_{max} - s_{min}}{m -1}(k - 1),\,\,\,\, k \in [1, m] \\
 		w_k^a &= s_k \sqrt{a_r},\,\,\,\, h_k^a = s_k / \sqrt{a_r} \\
-		a_R &\in \{ 1, 2, 3, \frac{1}{2}, \frac{1}{3} \}
+		a_r &\in \{ 1, 2, 3, \frac{1}{2}, \frac{1}{3} \}
 	\end{align}
 	Where, $m$ is the total number of output feature layers. For the default box, it is defined with scale $s_k^{\prime} = \sqrt{s_k s_{k+1}}$.
 	On the other hand, since SSD doesn't have ``objectness''. The \textbf{hard negative mining} is required for training. Hard negative mining is to select the negative samples with highest prediction probilities to conduct backpropagation. In SSD itself, the ratio of negative samples to positive samples is ensured as $3:1$.

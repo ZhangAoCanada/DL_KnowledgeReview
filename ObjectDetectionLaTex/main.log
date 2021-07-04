@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  3 JUL 2021 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  4 JUL 2021 10:01
 entering extended mode
 **./main.tex
 (main.tex
@@ -789,31 +789,35 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 (D:\texStudio\miktex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images/YOLO.png, id=54, 797.98125pt x 575.90157pt>
+<images/YOLO.png, id=46, 797.98125pt x 575.90157pt>
 File: images/YOLO.png Graphic file (type png)
 <use images/YOLO.png>
-Package pdftex.def Info: images/YOLO.png  used on input line 79.
+Package pdftex.def Info: images/YOLO.png  used on input line 130.
 (pdftex.def)             Requested size: 204.80272pt x 147.8064pt.
-<images/SSD.png, id=55, 1819.79875pt x 568.1225pt>
+<images/SSD.png, id=47, 1819.79875pt x 568.1225pt>
 File: images/SSD.png Graphic file (type png)
 <use images/SSD.png>
-Package pdftex.def Info: images/SSD.png  used on input line 87.
+Package pdftex.def Info: images/SSD.png  used on input line 138.
 (pdftex.def)             Requested size: 368.64238pt x 115.07884pt.
- [1
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
 
 {C:/Users/Zhang Ao/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./images/YOL
 O.png>] [2 <./images/SSD.png>] [3] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 613282C0672D42D42AAC502EDCA6ECDF;678.
+(rerunfilecheck)             Checksum: 29E1FA46971FD071C3E9725CF4157775;586.
  ) 
 Here is how much of TeX's memory you used:
- 20400 strings out of 479618
- 371747 string characters out of 2876815
- 699686 words of memory out of 3000000
- 37138 multiletter control sequences out of 15000+200000
+ 20396 strings out of 479618
+ 371707 string characters out of 2876815
+ 698686 words of memory out of 3000000
+ 37136 multiletter control sequences out of 15000+200000
  411628 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,9n,102p,478b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 102i,9n,102p,478b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Zhang Ao\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1000.pk><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/t
 exStudio/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/texStudio/miktex/
@@ -824,9 +828,9 @@ tudio/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/texStudio/miktex/font
 s/type1/public/amsfonts/cm/cmr17.pfb><D:/texStudio/miktex/fonts/type1/public/am
 sfonts/cm/cmr7.pfb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><D:/texStudio/miktex/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (3 pages, 788164 bytes).
+Output written on main.pdf (3 pages, 784790 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
