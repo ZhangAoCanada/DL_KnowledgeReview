@@ -64,7 +64,7 @@
 
 ## [CSPNet](https://arxiv.org/abs/1911.11929) (2019)<a name="CSPNet"/>
 
-[CSPNet](https://arxiv.org/abs/1911.11929) is different from other backbones. It is a method for the enhancement from other backbones. The following picture shows an example.
+[Cross Stage Partial Network](https://arxiv.org/abs/1911.11929) is different from other backbones. It is a method for the enhancement from other backbones. The following picture shows an example.
 
 <p align="center">
   <img src="./images/CSPNet.png">
