@@ -1,6 +1,6 @@
 # Popular Backbones for Object Detection
 
-## Contents
+## Content
 
 * [AlexNet (2012)](#AlexNet)
 * [VGG16 (2014)](#VGG16)

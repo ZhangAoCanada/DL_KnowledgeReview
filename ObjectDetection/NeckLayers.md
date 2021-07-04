@@ -75,7 +75,7 @@
 
 ### [ASFF](https://arxiv.org/abs/1911.09516?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529) (2019)<a name="ASFF"/>
 
-[Adaptively spatial feature fusion](https://arxiv.org/abs/1911.09516?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529)daptively spatial feature fusionA
+[Adaptively spatial feature fusion](https://arxiv.org/abs/1911.09516?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529)
 
 <p align="center">
   <img src="./images/ASFF.png">
