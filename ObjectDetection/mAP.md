@@ -1,6 +1,6 @@
 # Mean Average Precision (mAP) for Object Detection
 
-A detailed implementation can be found at [GitHub/mAP](https://github.com/Cartucho/mAP). Following sections illustrates how to compute mAP.
+A detailed implementation can be found at [GitHub/mAP](https://github.com/Cartucho/mAP). Following sections illustrate how to compute mAP.
 
 Before diving in, we first define a parameter `iou_threshold` such that the `mAP` function can take it as arg.
 ```python
