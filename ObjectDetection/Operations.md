@@ -17,8 +17,15 @@
     - [GIoU](#GIoU)
     - [DIoU](#DIoU)
     - [CIoU](#CIoU)
+- [Loss Functions for Classification](#ClassLossFunctions)
+    - [Cross Entropy](#CE)
+    - [Focal](#Focal)
 - [Data Augmentation](#DataAugmentation)
-    - [Rotation](#Rotation)
+    - [Geometric](#Geometric)
+    - [Color/Contrast](#ColorContrast)
+    - [Crop/Pad](#Crop/Pad)
+    - [Noise/Blur](#Noise/Blur)
+    - [CutOut/MixUp/CutMix](#Cutout/MixUp/CutMix)
 - [Regularization](#Regularization)
 - [Normalization](#Normalization)
 
@@ -111,3 +118,35 @@ Complete IoU
 <p align="center">
   <img src="./images/ciou.png" height="400">
 </p>
+
+## Loss Functions for Classification<a name="ClassLossFunctions"/>
+
+### Cross Entropy<a name="CE"/>
+
+```python
+CE(gt, pred) = - gt * log(pred) - (1 - gt) * log(1 - pred)
+```
+
+### [Focal](https://arxiv.org/abs/1708.02002) (2018)<a name="Focal"/>
+
+<p align="center">
+  <img src="./images/focal.png" height="50">
+</p>
+
+## Data Augmentation<a name="DataAugmentation"/>
+
+### [Geometric](https://github.com/aleju/imgaug#example_images)<a name="Geometric">
+
+Including Rotation, Flip, Affine, Perspective Transformation
+
+Rotation                  |  Flip                     |  Affine                | Perspective Transformation
+:------------------------:|:-------------------------:|:----------------------:|:----------------------:|
+![](images/rotation.gif)  |  ![](images/flip.gif)     |  ![](images/affine.gif)|  ![](images/PerspectiveTransformation.gif)
+
+### [Color/Contrast](https://github.com/aleju/imgaug#example_images)<a name="ColorContrast">
+
+### [Crop/Pad](https://github.com/aleju/imgaug#example_images)<a name="Crop/Pad">
+
+### [Noise/Blur](https://github.com/aleju/imgaug#example_images)<a name="Noise/Blur">
+
+### [CutOut/MixUp/CutMix](https://github.com/aleju/imgaug#example_images)<a name="Cutout/MixUp/CutMix">
