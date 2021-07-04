@@ -47,6 +47,33 @@ K: number of anchor boxes
 
 ### [Single Shot Detector (SSD)](https://arxiv.org/abs/1512.02325) (2016)<a name="SSD"/>
 
+- [SSD](https://arxiv.org/abs/1512.02325) is a hierarchical-based detector from the beginning. The box decoding system of [SSD](https://arxiv.org/abs/1512.02325) is shown as below.
+
 <p align="center">
   <img src="./images/SSD.png">
 </p>
+
+- Since it is a hierarchical-based detector, the output shape before the box decoding is
+```yaml
+raw features shape: [B, m, H, W, K, (4 + num_classes)]
+B: batch size
+H: height
+W: width
+m: number of hierarchical stages
+K: number of anchor boxes
+(5 + num_classes): box info [x, y, w, h] + num_classes
+```
+
+- The anchor boxes of [SSD](https://arxiv.org/abs/1512.02325) is computed based on scale `s` and aspect ratios `a_r`. Aspect ratios are also defined by K-means Clustering on the entire dataset. The anchor boxes are defined as
+```python
+def getAnchor():
+    a_r = [1, 2, 3, 1/2, 1/3] # all aspect ratios
+    s_min = 0.2 # minimum scale
+    s_max = 0.9 # maximum scale
+    m = 5 # number of hierarchical stages
+    for k in range(1, m):
+        for a in a_r:
+            s_k = s_min + (s_max - s_min) / (m - 1) * (k - 1) # scale of the k-th layer
+            w_k_a = s_k * sqrt(a) # width of the anchor box w.r.t k-th layer a-th aspect ratio
+            h_k_a = s_k / sqrt(a) # width of the anchor box w.r.t k-th layer a-th aspect ratio
+```
