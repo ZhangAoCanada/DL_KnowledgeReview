@@ -2,14 +2,17 @@
 
 ## Contents
 
-* [AlexNet](#AlexNet)
-* [VGG16](#VGG16)
-* [Inception](#Inception)
-* [ResNet50](#ResNet50)
-* [DenseNet](#DenseNet)
-* [MobileNet](#MobileNet)
-* [ShuffleNet](#ShuffleNet)
-* [SpineNet](#SpineNet)
+* [AlexNet (2012)](#AlexNet)
+* [VGG16 (2014)](#VGG16)
+* [Inception (2014)](#Inception)
+* [ResNet50 (2015)](#ResNet50)
+* [DenseNet (2016)](#DenseNet)
+* [MobileNet (2017)](#MobileNet)
+* [ShuffleNet (2017)](#ShuffleNet)
+* [NASNet (2018)](#NASNet)
+* [CSPNet (2019)](#CSPNet)
+* [SpineNet (2020)](#SpineNet)
+* [EfficientNet (2020)](#EfficientNet)
 
 ## [AlexNet](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) (2012)<a name="AlexNet"/>
 
@@ -53,8 +56,36 @@
   <img src="./images/shufflenet.png">
 </p>
 
-## [SpineNet](https://arxiv.org/abs/1912.05027) (2019)<a name="SpineNet"/>
+## [NASNet](https://arxiv.org/abs/1707.07012) (2018)<a name="NASNet"/>
+
+<p align="center">
+  <img src="./images/NASNet.png">
+</p>
+
+## [CSPNet](https://arxiv.org/abs/1911.11929) (2019)<a name="CSPNet"/>
+
+[CSPNet](https://arxiv.org/abs/1911.11929) is different from other backbones. It is a method for the enhancement from other backbones. The following picture shows an example.
+
+<p align="center">
+  <img src="./images/CSPNet.png">
+</p>
+
+## [SpineNet](https://arxiv.org/abs/1912.05027) (2020)<a name="SpineNet"/>
 
 <p align="center">
   <img src="./images/SpineNet.png">
+</p>
+
+## [EfficientNet](https://arxiv.org/abs/1905.11946) (2020)<a name="EfficientNet"/>
+
+The advantage of [EfficientNet-B0](https://arxiv.org/abs/1905.11946) is that it simultaneously up-scale the channel size and down-sample the feature maps shape.
+
+<p align="center">
+  <img src="./images/EfficientNet.png">
+</p>
+
+To scale up from [EfficientNet-B0](https://arxiv.org/abs/1905.11946) to [EfficientNet-B7](https://arxiv.org/abs/1905.11946), one has to follow the methods shown below
+
+<p align="center">
+  <img src="./images/EfficientNet_scales.png">
 </p>
