@@ -77,7 +77,7 @@ Gaussian Error Linear Unit
 GELU(x) = 0.5 * x * (1 + tanh(sqrt(2/pi)) * (x + 0.044715 * x**3))
 ```
 
-### Swish<a name="Swish"/>
+### [Swish](https://arxiv.org/pdf/1710.05941v1.pdf?source=post_page) (2017)<a name="Swish"/>
 
 ```python
 Swish(x) = x * sigmoid(a * x) = x / (1 + exp(- a * x))
@@ -181,10 +181,6 @@ Including 3 papers, [CutOut](https://arxiv.org/abs/1708.04552), [MixUp](https://
 </p>
 
 ## Regularization<a name="Reuglarization"/>
-
-    - [DropOut](#Dropout)
-    - [DropPath](#Droppath)
-    - [DropBlock](#Dropblock)
 
 ### [DropOut](https://arxiv.org/abs/1207.0580) (2012)<a name="Dropout"/>
 

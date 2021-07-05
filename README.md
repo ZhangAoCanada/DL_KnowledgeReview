@@ -11,4 +11,5 @@ This reposity is a quick review for all the Deep Learning related things I have 
 ## Content
 
 - [Object Detection](ObjectDetection/README.md)
+- [Semantic Segmentation](SemanticSegmentation/README.md)
 
