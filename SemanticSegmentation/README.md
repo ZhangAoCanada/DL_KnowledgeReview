@@ -2,6 +2,6 @@
 
 ## Content
 
-* [Architectures](#Architectures)
+* [Architectures](#Architectures.md)
 * [Loss Fuctions]()
 * [Metrics]()
