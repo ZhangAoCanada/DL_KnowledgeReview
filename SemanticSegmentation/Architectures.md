@@ -13,7 +13,7 @@
   - [U-Net (2015)](#UNet)
   - [Attention U-Net (2018)](#AttentionUNet)
   - [TransUNet (2021)](#TransUNet)
-- [Swin-Transformer](#SwinTransformer)
+- [Swin-Transformer (2021)](#SwinTransformer)
 
 
 ## [Fully Convolutional Networks (FCN)](https://arxiv.org/abs/1411.4038) (2015)<a name="FCN"/>
