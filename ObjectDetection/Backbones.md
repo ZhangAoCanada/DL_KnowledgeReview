@@ -45,7 +45,7 @@
   <img src="./images/densenet.png">
 </p>
 
-## [MobileNets V1](https://arxiv.org/abs/1409.4842) (2017) and [MobileNet V2](https://arxiv.org/abs/1801.04381) (2018)<a name="MobileNet"/>
+## [MobileNets V1](https://arxiv.org/abs/1704.04861) (2017) and [MobileNet V2](https://arxiv.org/abs/1801.04381) (2018)<a name="MobileNet"/>
 
 <p align="center">
   <img src="./images/mobilenet.png">
