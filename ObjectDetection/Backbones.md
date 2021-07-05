@@ -13,6 +13,7 @@
 * [CSPNet (2019)](#CSPNet)
 * [SpineNet (2020)](#SpineNet)
 * [EfficientNet (2020)](#EfficientNet)
+* [Swin-Transformer (2021)](#SwinTransformer)
 
 ## [AlexNet](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) (2012)<a name="AlexNet"/>
 
@@ -88,4 +89,12 @@ To scale up from [EfficientNet-B0](https://arxiv.org/abs/1905.11946) to [Efficie
 
 <p align="center">
   <img src="./images/EfficientNet_scales.png">
+</p>
+
+## [Swin-Transformer](https://arxiv.org/abs/2103.14030) (2021)<a name="SwinTransformer"/>
+
+[Swin-Transformer](https://arxiv.org/abs/2103.14030) is developed under the inspiration of [ViT](https://arxiv.org/abs/2010.11929). Specifically, it defines a window-based transformer mechanism for reducing the model size.
+
+<p align="center">
+  <img src="./images/SwinTransformer.png">
 </p>
