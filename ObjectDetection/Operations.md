@@ -180,6 +180,12 @@ Including 3 papers, [CutOut](https://arxiv.org/abs/1708.04552), [MixUp](https://
   <img src="./images/CutMix.png" height="300">
 </p>
 
+**Note:** For the implementation of MixUp in Object Detection, the loss function of box regression is computed based on all the instances in both images. On the other hand, the loss function of classification is a combination of loss functions from individual images. For example, if the mixup coefficient is `a = 0.4`, the loss function of classification would be `L_mixup = a * L_image1 + (1-a) * L_image2`
+
+<p align="center">
+  <img src="./images/mixup_in_od.png" height="200">
+</p>
+
 ## Regularization<a name="Reuglarization"/>
 
 ### [DropOut](https://arxiv.org/abs/1207.0580) (2012)<a name="Dropout"/>
