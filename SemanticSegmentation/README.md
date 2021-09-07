@@ -3,5 +3,5 @@
 ## Content
 
 * [Architectures](Architectures.md)
-* [Loss Fuctions]()
+* [Loss Fuctions](LossFunctions.md)
 * [Metrics]()
