@@ -4,4 +4,4 @@
 
 * [Architectures](Architectures.md)
 * [Loss Fuctions](LossFunctions.md)
-* [Metrics]()
+* [Metrics](Metrics.md)
