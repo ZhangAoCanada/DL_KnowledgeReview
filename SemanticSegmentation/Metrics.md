@@ -2,10 +2,10 @@
 
 ## Content
 
-* [Mask IoU](#miou)
+* [Mask IoU](#iou)
 * [F1 score](#f1score)
 
-## Mask IoU<a name="miou"/>
+## Mask IoU<a name="iou"/>
 
 Since semantic segmentation is not an instance-wise detection algorithm, the AP metric is not applicable. Instead, we use the Mask Iou metric to evaluate the performance of semantic segmentation.
 
