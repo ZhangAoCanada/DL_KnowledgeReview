@@ -45,10 +45,14 @@
   <img src="./images/densenet.png">
 </p>
 
-## [MobileNets V1](https://arxiv.org/abs/1704.04861) (2017) and [MobileNet V2](https://arxiv.org/abs/1801.04381) (2018)<a name="MobileNet"/>
+## [MobileNets V1](https://arxiv.org/abs/1704.04861) (2017) and [MobileNet V2](https://arxiv.org/abs/1801.04381) (2018) and [MobileNet V3](https://arxiv.org/abs/1905.02244) (2019)<a name="MobileNet"/>
 
 <p align="center">
   <img src="./images/mobilenet.png">
+</p>
+
+<p align="center">
+  <img src="./images/mobilenetv3.png">
 </p>
 
 ## [ShuffleNet](https://arxiv.org/abs/1707.01083) (2017)<a name="ShuffleNet"/>
@@ -77,7 +81,7 @@
   <img src="./images/SpineNet.png">
 </p>
 
-## [EfficientNet](https://arxiv.org/abs/1905.11946) (2020)<a name="EfficientNet"/>
+## [EfficientNet](https://arxiv.org/abs/1905.11946) (2020) and [EfficientNetV2](https://arxiv.org/abs/2104.00298) (2021)<a name="EfficientNet"/>
 
 The advantage of [EfficientNet-B0](https://arxiv.org/abs/1905.11946) is that it simultaneously up-scale the channel size and down-sample the feature maps shape.
 
@@ -89,6 +93,12 @@ To scale up from [EfficientNet-B0](https://arxiv.org/abs/1905.11946) to [Efficie
 
 <p align="center">
   <img src="./images/EfficientNet_scales.png">
+</p>
+
+Compared to [EfficientNet](https://arxiv.org/abs/1905.11946), [EfficientNetV2](https://arxiv.org/abs/2104.00298) mixes MBConv and Fused-MBConv into the model, and uses progressive learning (different regularization with different input image sizes) to improve the training speed and parameters efficiency. Similar to [EfficientNet](https://arxiv.org/abs/1905.11946), the architecture of [EfficientNetV2](https://arxiv.org/abs/2104.00298) is also found by NAS (Neural Architecture Search).
+
+<p align="center">
+  <img src="./images/efficientnetv2.png">
 </p>
 
 ## [Swin-Transformer](https://arxiv.org/abs/2103.14030) (2021)<a name="SwinTransformer"/>
