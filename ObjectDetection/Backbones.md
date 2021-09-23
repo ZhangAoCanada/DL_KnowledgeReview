@@ -14,6 +14,7 @@
 * [SpineNet (2020)](#SpineNet)
 * [EfficientNet (2020)](#EfficientNet)
 * [Swin-Transformer (2021)](#SwinTransformer)
+* [CoAtNet (2021)](#CoAtNet)
 
 ## [AlexNet](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) (2012)<a name="AlexNet"/>
 
@@ -107,4 +108,12 @@ Compared to [EfficientNet](https://arxiv.org/abs/1905.11946), [EfficientNetV2](h
 
 <p align="center">
   <img src="./images/SwinTransformer.png">
+</p>
+
+## [CoAtNet](https://arxiv.org/abs/2106.04803) (2021)<a name="CoAtNet"/>
+
+The latest research of Google Brian Team shows the power of combining CNN models with Transformer. This paper is introduced with intensive and systematic experiments, including the work on improving the model generalization and capacity.
+
+<p align="center">
+  <img src="./images/CoAtNet.png">
 </p>
